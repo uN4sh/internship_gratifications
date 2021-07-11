@@ -37,5 +37,5 @@ Au dessus de 2 mois de stage, la possibilité de pouvoir poser des jours de cong
 
 En savoir plus sur les articles du [service-public.fr](https://www.service-public.fr/professionnels-entreprises/vosdroits/F20559) ou [travail-emploi.gouv.fr](https://travail-emploi.gouv.fr/emploi-et-insertion/mesures-jeunes/article/les-stages-etudiants-en-milieu-professionnel)
 
-## Output exemple
+## Exemple d'utilisation
 ![Exemple d'utilisation](https://github.com/fm16191/internship_gratifications/blob/master/usage.png?raw=true)
