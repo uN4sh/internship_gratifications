@@ -78,6 +78,7 @@ for day in all_days:
         working_days_name.append(day)
 
 working_days = 0
+remaining_days = 0
 hours = 0
 
 for i in range((date_end - date_begin).days + 1):
@@ -87,9 +88,12 @@ for i in range((date_end - date_begin).days + 1):
     if not day_name.lower() in not_working_days :
         hours += hours_per_day
         working_days += 1
+        if day > date.today():
+            remaining_days += 1
         # print(hours)
 
 working_hours_count = working_days*hours_per_day
+remaining_hours_count = remaining_days*hours_per_day
 gratification_count = working_days*hours_per_day*gratification
 
 days_off = 0 if working_hours_count <=44*7 else working_hours_count/(22*7)*2.5
@@ -98,8 +102,8 @@ days_off = 0 if working_hours_count <=44*7 else working_hours_count/(22*7)*2.5
 print(f"\n==== FROM {date_begin_str} TO {date_end_str}")
 print(f"==== {hours_per_day} hours a day | {gratification}€ per hour")
 print(f"==== Working days  : {','.join(working_days_name)}\n")
-print(f"> Working days count            : {working_days}")
-print(f"> Working hours count           : {working_hours_count}")
+print(f"> Working days count            : {working_days} ({remaining_days} days left)")
+print(f"> Working hours count           : {working_hours_count} ({remaining_hours_count} hours left)")
 print(f"> Estimated gratification total : {gratification_count:.1f}")
 print(f"> Estimated days off count      : {days_off:.1f}")
 print("\nDisclaimer: Gratification and days off counts are estimations, and might differs depending on your employer")
